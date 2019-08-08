@@ -10,7 +10,7 @@ const siteContent = {
   },
   "cta": {
     "h1": "DOM Is Awesome",
-    "button": "Get Started",
+    "button": "Night Mode",
     "img-src": "img/header-img.png"
   },
   "main-content": {
@@ -88,5 +88,21 @@ mainContent[7].textContent = siteContent["contact"]["email"];
 // Footer Content
 mainContent[8].textContent = siteContent["footer"]["copyright"];
 
+// Changes Navigation Text to Green 
+navOne[0].style.color = "green";
+navOne[1].style.color = "green";
+navOne[2].style.color = "green";
+navOne[3].style.color = "green";
+navOne[4].style.color = "green";
+navOne[5].style.color = "green";
 
+// Appends and Prepends Content
+navOne[0].prepend("Hello -");
+navOne[5].append(" -World!");
 
+//Stretch Goal 
+buttonOne[0].addEventListener('click', function(){
+  let bodyChange = document.querySelector('body');
+  bodyChange.style.backgroundColor = "black";
+  bodyChange.style.color = "white";
+})
