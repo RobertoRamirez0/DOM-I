@@ -10,7 +10,7 @@ const siteContent = {
   },
   "cta": {
     "h1": "DOM Is Awesome",
-    "button": "Get Started",
+    "button": "Night Mode",
     "img-src": "img/header-img.png"
   },
   "main-content": {
@@ -40,3 +40,69 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Nav Items
+let navOne = document.querySelectorAll('a');
+navOne[0].textContent = siteContent["nav"]["nav-item-1"];
+navOne[1].textContent = siteContent["nav"]["nav-item-2"];
+navOne[2].textContent = siteContent["nav"]["nav-item-3"];
+navOne[3].textContent = siteContent["nav"]["nav-item-4"];
+navOne[4].textContent = siteContent["nav"]["nav-item-5"];
+navOne[5].textContent = siteContent["nav"]["nav-item-6"];
+
+// Header Section
+
+let headerOne = document.getElementsByTagName('h1');
+headerOne[0].textContent = siteContent["cta"]['h1'];
+
+let buttonOne = document.getElementsByTagName('button');
+buttonOne[0].textContent = siteContent["cta"]["button"];
+
+let ctaImage = document.getElementById("cta-img");
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+// Body Section
+
+let mainHeader = document.getElementsByTagName('h4');
+mainHeader[0].textContent = siteContent["main-content"]["features-h4"];
+mainHeader[1].textContent = siteContent["main-content"]["about-h4"];
+mainHeader[2].textContent = siteContent["main-content"]["services-h4"];
+mainHeader[3].textContent = siteContent["main-content"]["product-h4"];
+mainHeader[4].textContent = siteContent["main-content"]["vision-h4"];
+// Contact Header
+mainHeader[5].textContent = siteContent["contact"]["contact-h4"];
+
+let mainImage = document.getElementById("middle-img");
+mainImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let mainContent = document.getElementsByTagName('p');
+mainContent[0].textContent = siteContent["main-content"]["features-content"];
+mainContent[1].textContent = siteContent["main-content"]["about-content"];
+mainContent[2].textContent = siteContent["main-content"]["services-content"];
+mainContent[3].textContent = siteContent["main-content"]["product-content"];
+mainContent[4].textContent = siteContent["main-content"]["vision-content"];
+// Contact Content
+mainContent[5].textContent = siteContent["contact"]["address"];
+mainContent[6].textContent = siteContent["contact"]["phone"];
+mainContent[7].textContent = siteContent["contact"]["email"];
+// Footer Content
+mainContent[8].textContent = siteContent["footer"]["copyright"];
+
+// Changes Navigation Text to Green 
+navOne[0].style.color = "green";
+navOne[1].style.color = "green";
+navOne[2].style.color = "green";
+navOne[3].style.color = "green";
+navOne[4].style.color = "green";
+navOne[5].style.color = "green";
+
+// Appends and Prepends Content
+navOne[0].prepend("Hello -");
+navOne[5].append(" -World!");
+
+//Stretch Goal 
+buttonOne[0].addEventListener('click', function(){
+  let bodyChange = document.querySelector('body');
+  bodyChange.style.backgroundColor = "black";
+  bodyChange.style.color = "white";
+})
